@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit" xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin" xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd" xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation" xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable" xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template">
+  <unit:translations/>
+  <unit:unittypes>
+    <unit:unittype unit:id="HS Mannheim Obstacles profile">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:varname="image" var:type="image">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:varname="descretisationLevel" var:type="int32">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out>
+          <unit:connector var:varname="profile" var:type="intvector">
+            <var:default var:val=""/>
+          </unit:connector>
+        </unit:out>
+      </unit:connectors>
+      <unit:state/>
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="image" unit:side="left"/>
+            <unit:layout unit:varname="descretisationLevel" unit:side="left"/>
+          </unit:in>
+          <unit:out>
+            <unit:layout unit:varname="profile" unit:side="right"/>
+          </unit:out>
+        </unit:connectors>
+        <unit:state/>
+        <unit:description>
+          <unit:name>Obstacles profile</unit:name>
+          <unit:icon unit:filename="icons/"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="image">
+                <unit:description>Input Image </unit:description>
+              </unit:info>
+              <unit:info unit:varname="descritisationLevel">
+                <unit:description>number of intervals for the discretisation</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out>
+              <unit:info unit:varname="profile">
+                <unit:description>Obstacles profile </unit:description>
+              </unit:info>
+            </unit:out>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robview_myfunctionblocks_obstaclesprofile_simulation"/>
+      </unit:plugins>
+    </unit:unittype>
+  </unit:unittypes>
+</unit:unit>
