@@ -10,15 +10,28 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/photo/photo.hpp>
 
+using namespace cv;
+using namespace std;
 
 class Obstaclesprofile : public plugin::simulation::Unit
 {
 public:
 	Obstaclesprofile (plugin::simulation::UnitDelegate& del);
-
 	void step (void);
+	void findContours();
+	void processContours();
+	void fillIntVector();
 
 private:
+	Mat src, src_gray, dst, canny_output;
+	int thresh;
+	int im_width;
+	int nSamples;
+	int puckY;
+	int dSamples;
+	vector<vector<Point2i> > contours;
+	vector<int> descrete;
+	rec::core::IntVector profile;
 };
 
 #endif // _Obstaclesprofile_H_

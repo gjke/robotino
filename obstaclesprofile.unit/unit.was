@@ -12,9 +12,6 @@
           <unit:connector var:varname="descretisationLevel" var:type="int32">
             <var:default var:val="0"/>
           </unit:connector>
-          <unit:connector var:varname="puckY" var:type="int32">
-            <var:default var:val="0"/>
-          </unit:connector>
         </unit:in>
         <unit:out>
           <unit:connector var:varname="profile" var:type="intvector">
@@ -28,7 +25,6 @@
           <unit:in>
             <unit:layout unit:varname="image" unit:side="left"/>
             <unit:layout unit:varname="descretisationLevel" unit:side="left"/>
-            <unit:layout unit:varname="puckY" unit:side="left" unit:display="hidden"/>
           </unit:in>
           <unit:out>
             <unit:layout unit:varname="profile" unit:side="right"/>
@@ -45,9 +41,6 @@
               </unit:info>
               <unit:info unit:varname="descritisationLevel">
                 <unit:description>number of intervals for the discretisation</unit:description>
-              </unit:info>
-              <unit:info unit:varname="puckY">
-                <unit:description>The Y-Coordinate of the puck</unit:description>
               </unit:info>
             </unit:in>
             <unit:out>
