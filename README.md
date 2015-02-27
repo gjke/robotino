@@ -11,3 +11,6 @@ accomplished with a simple feed forward neural network using the FANN (Fast Arti
 
 Here is a short guide how to get the openCV library work in Windows and make it accessable in Visual Studio 2010
 <a href="https://github.com/gjke/robotino/wiki/New-Function-Block-for-RobotinoView-2-with-openCV">Install and use OpenCV</a>
+
+Here is a short guide how to get the FANN library work in Windows and make it accessable in Visual Studio 2010
+<a href="https://github.com/gjke/robotino/wiki/New-Function-Block-for-RobotinoView-2-with-FANN">Install and use OpenCV</a>
