@@ -17,9 +17,6 @@
           <unit:connector var:varname="deflection" var:type="int32">
             <var:default var:val="0"/>
           </unit:connector>
-          <unit:connector var:varname="y" var:type="int32">
-            <var:default var:val="0"/>
-          </unit:connector>
           <unit:connector var:varname="area" var:type="int32">
             <var:default var:val="0"/>
           </unit:connector>
@@ -37,7 +34,6 @@
           <unit:out>
             <unit:layout unit:varname="ifFound" unit:side="right"/>
             <unit:layout unit:varname="deflection" unit:side="right"/>
-            <unit:layout unit:varname="y" unit:side="right" unit:display="hidden"/>
             <unit:layout unit:varname="area" unit:side="right"/>
 			<unit:layout unit:varname="imageWithoutObject" unit:side="right"/>
           </unit:out>
@@ -58,9 +54,6 @@
               </unit:info>
               <unit:info unit:varname="deflection">
                 <unit:description>Deflection of the red object from the middle of the image</unit:description>
-              </unit:info>
-              <unit:info unit:varname="y">
-                <unit:description>Y-Coordinate of the Red object</unit:description>
               </unit:info>
               <unit:info unit:varname="area">
                 <unit:description>Area of the red object in px^2</unit:description>

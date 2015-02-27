@@ -15,16 +15,23 @@
 #include <iostream>
 #include <fstream>
 
+using namespace std;
+using namespace cv;
+
 
 
 class OpenCVredobject : public plugin::simulation::Unit
 {
 public:
 	OpenCVredobject (plugin::simulation::UnitDelegate& del);
-
 	void step (void);
-
+	void getOI(void);
+	rec::core::image::Image removeObject(vector<Point2i>*, int area);
 private:
+	int lastDeflection;
+	int maxDeflection;
+	cv::Mat img;
+	rec::core::image::Image inputImage;
 };
 
 #endif // _OpenCVTest_H_
