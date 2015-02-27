@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit:unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:unit="http://easykit.informatik.tu-muenchen.de/schema/unit" xmlns:plugin="http://easykit.informatik.tu-muenchen.de/schema/plugin" xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/unit unit.xsd" xmlns:tr="http://easykit.informatik.tu-muenchen.de/schema/translation" xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable" xmlns:tmpl="http://easykit.informatik.tu-muenchen.de/schema/template">
+  <unit:translations/>
+  <unit:unittypes>
+    <unit:unittype unit:id="HS Mannheim Write Training Set">
+      <unit:typeTemplates/>
+      <unit:connectors>
+        <unit:in>
+          <unit:connector var:varname="canWrite" var:type="bool">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:varname="nSets" var:type="int32">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:varname="nInputs" var:type="int32">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:varname="input" var:type="intvector">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:varname="nOutputs" var:type="int32">
+            <var:default var:val="0"/>
+          </unit:connector>
+          <unit:connector var:varname="output" var:type="intvector">
+            <var:default var:val="0"/>
+          </unit:connector>
+        </unit:in>
+        <unit:out/>
+      </unit:connectors>
+      <unit:state/>
+      <unit:guiinfo>
+        <unit:connectors>
+          <unit:in>
+            <unit:layout unit:varname="canWrite" unit:side="left"/>
+            <unit:layout unit:varname="nSets" unit:side="left"/>
+            <unit:layout unit:varname="nInputs" unit:side="left"/>
+            <unit:layout unit:varname="input" unit:side="left"/>
+            <unit:layout unit:varname="nOutputs" unit:side="left"/>
+            <unit:layout unit:varname="output" unit:side="left"/>
+          </unit:in>
+          <unit:out/>
+        </unit:connectors>
+        <unit:state/>
+        <unit:description>
+          <unit:name>Write Training Set</unit:name>
+          <unit:icon unit:filename="icons/"/>
+          <unit:connectors>
+            <unit:in>
+              <unit:info unit:varname="canWrite">
+                <unit:description>should the current data be written or not</unit:description>
+              </unit:info>
+              <unit:info unit:varname="nSets">
+                <unit:description>Number of the training sets</unit:description>
+              </unit:info>
+              <unit:info unit:varname="nInputs">
+                <unit:description>Number of the inputs</unit:description>
+              </unit:info>
+              <unit:info unit:varname="input">
+                <unit:description>Array of inputs</unit:description>
+              </unit:info>
+              <unit:info unit:varname="nOutputs">
+                <unit:description>number of the outputs</unit:description>
+              </unit:info>
+              <unit:info unit:varname="output">
+                <unit:description>Array of outputs</unit:description>
+              </unit:info>
+            </unit:in>
+            <unit:out/>
+          </unit:connectors>
+          <unit:state/>
+        </unit:description>
+      </unit:guiinfo>
+      <unit:plugins>
+        <unit:plugin plugin:type="simulation" plugin:library="unit_robview_myfunctionblocks_writetrainingset_simulation"/>
+     
+      </unit:plugins>
+    </unit:unittype>
+  </unit:unittypes>
+</unit:unit>
