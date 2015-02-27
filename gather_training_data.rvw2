@@ -1,0 +1,1230 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<md:model xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model" xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device" xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue" xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/model model.xsd">
+
+  <md:settings kv:key="settings">
+    <kv:item kv:key="generic" kv:value="">
+      <kv:item kv:key="executionMode" kv:value="simulation"/>
+    </kv:item>
+    <kv:item kv:key="skill" kv:value="">
+      <kv:item kv:key="deviceSkillLevel" kv:value="-1"/>
+      <kv:item kv:key="unitSkillLevel" kv:value="-1"/>
+      <kv:item kv:key="typeSystemFeatureSkillLevel" kv:value="0"/>
+    </kv:item>
+    <kv:item kv:key="codegen" kv:value=""/>
+  </md:settings>
+
+  <md:variables>
+    <md:variable var:type="float" var:varname="a">
+      <var:default var:val="2400.000000"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="asoll">
+      <var:default var:val="1400.000000"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="d">
+      <var:default var:val="0.000000"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="ifFound">
+      <var:default var:val="0.000000"/>
+    </md:variable>
+    <md:variable var:type="floatvector" var:varname="input">
+      <var:default var:val="()"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="nInputs">
+      <var:default var:val="10.000000"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="nOutputs">
+      <var:default var:val="3.000000"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="nSamples">
+      <var:default var:val="8.000000"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="nSets">
+      <var:default var:val="10000.000000"/>
+    </md:variable>
+    <md:variable var:type="floatvector" var:varname="output">
+      <var:default var:val="()"/>
+    </md:variable>
+    <md:variable var:type="string" var:varname="path">
+      <var:default var:val="tr.txt"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="phidotk">
+      <var:default var:val="-0.100000"/>
+    </md:variable>
+    <md:variable var:type="float" var:varname="xdotk">
+      <var:default var:val="0.100000"/>
+    </md:variable>
+  </md:variables>
+
+  <md:device>
+    <md:instance md:deviceType="Generic" md:instanceName="Generic">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs/>
+      <md:dynamicUnits/>
+    </md:instance>
+    <md:instance md:deviceType="MyFuncBlocks" md:instanceName="MyFuncBlocks">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs/>
+      <md:dynamicUnits/>
+    </md:instance>
+    <md:instance md:deviceType="REC GmbH Robotino" md:instanceName="Robotino®">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs>
+        <md:varExpr md:value="172.26.1.1" md:varname="ipAddress"/>
+        <md:varExpr md:value="172.26.1.1;;127.0.0.1:8080" md:varname="ipAddressHistory"/>
+        <md:varExpr md:value="8080" md:varname="imageServerPort"/>
+        <md:varExpr md:value="(320 240)" md:varname="camera_resolution"/>
+        <md:varExpr md:value="false" md:varname="disableDriveSystem"/>
+        <md:varExpr md:value="9" md:varname="num_axes"/>
+        <md:varExpr md:value="30" md:varname="num_pos_max"/>
+        <md:varExpr md:value="0" md:varname="num_pos"/>
+        <md:varExpr md:value="Pos1" md:varname="pos0_name"/>
+        <md:varExpr md:value="Pos2" md:varname="pos1_name"/>
+        <md:varExpr md:value="Pos3" md:varname="pos2_name"/>
+        <md:varExpr md:value="Pos4" md:varname="pos3_name"/>
+        <md:varExpr md:value="Pos5" md:varname="pos4_name"/>
+        <md:varExpr md:value="Pos6" md:varname="pos5_name"/>
+        <md:varExpr md:value="Pos7" md:varname="pos6_name"/>
+        <md:varExpr md:value="Pos8" md:varname="pos7_name"/>
+        <md:varExpr md:value="Pos9" md:varname="pos8_name"/>
+        <md:varExpr md:value="Pos10" md:varname="pos9_name"/>
+        <md:varExpr md:value="Pos11" md:varname="pos10_name"/>
+        <md:varExpr md:value="Pos12" md:varname="pos11_name"/>
+        <md:varExpr md:value="Pos13" md:varname="pos12_name"/>
+        <md:varExpr md:value="Pos14" md:varname="pos13_name"/>
+        <md:varExpr md:value="Pos15" md:varname="pos14_name"/>
+        <md:varExpr md:value="Pos16" md:varname="pos15_name"/>
+        <md:varExpr md:value="Pos17" md:varname="pos16_name"/>
+        <md:varExpr md:value="Pos18" md:varname="pos17_name"/>
+        <md:varExpr md:value="Pos19" md:varname="pos18_name"/>
+        <md:varExpr md:value="Pos20" md:varname="pos19_name"/>
+        <md:varExpr md:value="Pos21" md:varname="pos20_name"/>
+        <md:varExpr md:value="Pos22" md:varname="pos21_name"/>
+        <md:varExpr md:value="Pos23" md:varname="pos22_name"/>
+        <md:varExpr md:value="Pos24" md:varname="pos23_name"/>
+        <md:varExpr md:value="Pos25" md:varname="pos24_name"/>
+        <md:varExpr md:value="Pos26" md:varname="pos25_name"/>
+        <md:varExpr md:value="Pos27" md:varname="pos26_name"/>
+        <md:varExpr md:value="Pos28" md:varname="pos27_name"/>
+        <md:varExpr md:value="Pos29" md:varname="pos28_name"/>
+        <md:varExpr md:value="Pos30" md:varname="pos29_name"/>
+        <md:varExpr md:value="()" md:varname="pos0"/>
+        <md:varExpr md:value="()" md:varname="pos1"/>
+        <md:varExpr md:value="()" md:varname="pos2"/>
+        <md:varExpr md:value="()" md:varname="pos3"/>
+        <md:varExpr md:value="()" md:varname="pos4"/>
+        <md:varExpr md:value="()" md:varname="pos5"/>
+        <md:varExpr md:value="()" md:varname="pos6"/>
+        <md:varExpr md:value="()" md:varname="pos7"/>
+        <md:varExpr md:value="()" md:varname="pos8"/>
+        <md:varExpr md:value="()" md:varname="pos9"/>
+        <md:varExpr md:value="()" md:varname="pos10"/>
+        <md:varExpr md:value="()" md:varname="pos11"/>
+        <md:varExpr md:value="()" md:varname="pos12"/>
+        <md:varExpr md:value="()" md:varname="pos13"/>
+        <md:varExpr md:value="()" md:varname="pos14"/>
+        <md:varExpr md:value="()" md:varname="pos15"/>
+        <md:varExpr md:value="()" md:varname="pos16"/>
+        <md:varExpr md:value="()" md:varname="pos17"/>
+        <md:varExpr md:value="()" md:varname="pos18"/>
+        <md:varExpr md:value="()" md:varname="pos19"/>
+        <md:varExpr md:value="()" md:varname="pos20"/>
+        <md:varExpr md:value="()" md:varname="pos21"/>
+        <md:varExpr md:value="()" md:varname="pos22"/>
+        <md:varExpr md:value="()" md:varname="pos23"/>
+        <md:varExpr md:value="()" md:varname="pos24"/>
+        <md:varExpr md:value="()" md:varname="pos25"/>
+        <md:varExpr md:value="()" md:varname="pos26"/>
+        <md:varExpr md:value="()" md:varname="pos27"/>
+        <md:varExpr md:value="()" md:varname="pos28"/>
+        <md:varExpr md:value="()" md:varname="pos29"/>
+        <md:varExpr md:value="true" md:varname="line0_enabled"/>
+        <md:varExpr md:value="true" md:varname="line1_enabled"/>
+        <md:varExpr md:value="true" md:varname="line2_enabled"/>
+      </md:configVarExprs>
+      <md:dynamicUnits/>
+    </md:instance>
+  </md:device>
+
+  <md:utspecs>
+    <md:utspec md:id="rec_gmbh_global_variable_reader_float"/>
+    <md:utspec md:id="rec_gmbh_global_variable_writer_float"/>
+    <md:utspec md:id="rec_gmbh_basic_multiplication"/>
+    <md:utspec md:id="rec_gmbh_basic_subtraction"/>
+    <md:utspec md:id="rec_gmbh_robotino_camera"/>
+    <md:utspec md:id="rec_gmbh_robotino_motor"/>
+    <md:utspec md:id="rec_gmbh_robotino_omnidrive"/>
+    <md:utspec md:id="rec_gmbh_controlpanel"/>
+    <md:utspec md:id="hs_mannheim_combine_into_vector"/>
+    <md:utspec md:id="hs_mannheim_obstacles_profile"/>
+    <md:utspec md:id="hs_mannheim_opencv_red_object"/>
+    <md:utspec md:id="hs_mannheim_write_training_set"/>
+  </md:utspecs>
+
+  <md:sdfs>
+    <md:sdf md:id="sdfmodel_step1" md:name="Step1">
+      <md:units>
+        <md:unit md:deviceInstanceName="Robotino®" md:id="actor_kamera" md:name="Kamera" md:type="REC GmbH Robotino Camera" md:utspec="rec_gmbh_robotino_camera" md:variantName="REC GmbH Robotino Camera">
+          <md:outVarExprs>
+            <md:varExpr md:varname="image">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="MyFuncBlocks" md:id="actor_opencv_red_object__1_" md:name="openCV red object (1)" md:type="HS Mannheim openCV red object" md:utspec="hs_mannheim_opencv_red_object" md:variantName="HS Mannheim openCV red object">
+          <md:inVarExprs>
+            <md:varExpr md:value="" md:varname="image">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="ifFound">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="deflection">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="y">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="area">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="imageWithoutObject">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="MyFuncBlocks" md:id="actor_obstacles_profile__1_" md:name="Obstacles profile (1)" md:type="HS Mannheim Obstacles profile" md:utspec="hs_mannheim_obstacles_profile" md:variantName="HS Mannheim Obstacles profile">
+          <md:inVarExprs>
+            <md:varExpr md:value="" md:varname="image">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="descretisationLevel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="puckY">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="profile">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_steuerungsfeld__1_" md:name="Steuerungsfeld (1)" md:type="REC GmbH ControlPanel" md:utspec="rec_gmbh_controlpanel" md:variantName="REC GmbH ControlPanel">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="vx_raw">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="vy_raw">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="omega_raw">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="speed">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="vx">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="vy">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="omega">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_nsamples" md:name="nSamples" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="nSamples reader">
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="MyFuncBlocks" md:id="actor_write_training_set__1_" md:name="Write Training Set (1)" md:type="HS Mannheim Write Training Set" md:utspec="hs_mannheim_write_training_set" md:variantName="HS Mannheim Write Training Set">
+          <md:inVarExprs>
+            <md:varExpr md:value="false" md:varname="canWrite">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="nSets">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="nInputs">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="()" md:varname="input">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="nOutputs">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="()" md:varname="output">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_noutputs" md:name="nOutputs" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="nOutputs reader">
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_ninputs" md:name="nInputs" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="nInputs reader">
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_nsets" md:name="nSets" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="nSets reader">
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Robotino®" md:id="actor_omniantrieb__1_" md:name="Omniantrieb (1)" md:type="REC GmbH Robotino Omnidrive" md:utspec="rec_gmbh_robotino_omnidrive" md:variantName="REC GmbH Robotino Omnidrive">
+          <md:inVarExprs>
+            <md:varExpr md:value="0.000000" md:varname="vx">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="vy">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="omega">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="m1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="m2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="m3">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Robotino®" md:id="actor_motor__1" md:name="Motor #1" md:type="REC GmbH Robotino Motor" md:utspec="rec_gmbh_robotino_motor" md:variantName="Motor[ #1]">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="address">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0.000000" md:varname="setvel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="resetpos">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="brake">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="100" md:varname="accel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="100" md:varname="decel">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="25" md:varname="kp">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="25" md:varname="ki">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="25" md:varname="kd">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="resetOnStart">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="useControllerDefaults">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="actualvel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="actualpos">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="current">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Robotino®" md:id="actor_motor__2" md:name="Motor #2" md:type="REC GmbH Robotino Motor" md:utspec="rec_gmbh_robotino_motor" md:variantName="Motor[ #2]">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="address">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0.000000" md:varname="setvel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="resetpos">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="brake">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="100" md:varname="accel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="100" md:varname="decel">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="25" md:varname="kp">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="25" md:varname="ki">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="25" md:varname="kd">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="resetOnStart">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="useControllerDefaults">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="actualvel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="actualpos">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="current">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Robotino®" md:id="actor_motor__3" md:name="Motor #3" md:type="REC GmbH Robotino Motor" md:utspec="rec_gmbh_robotino_motor" md:variantName="Motor[ #3]">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="address">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0.000000" md:varname="setvel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="resetpos">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="brake">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="100" md:varname="accel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="100" md:varname="decel">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="25" md:varname="kp">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="25" md:varname="ki">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="25" md:varname="kd">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="resetOnStart">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="useControllerDefaults">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="actualvel">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="actualpos">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="current">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="MyFuncBlocks" md:id="actor_combine_into_vector__1_" md:name="Combine Into Vector (1)" md:type="HS Mannheim Combine Into Vector" md:utspec="hs_mannheim_combine_into_vector" md:variantName="HS Mannheim Combine Into Vector">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="in1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="in2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="()" md:varname="in3">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="in4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="vector">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="MyFuncBlocks" md:id="actor_combine_into_vector__2_" md:name="Combine Into Vector (2)" md:type="HS Mannheim Combine Into Vector" md:utspec="hs_mannheim_combine_into_vector" md:variantName="HS Mannheim Combine Into Vector">
+          <md:inVarExprs>
+            <md:varExpr md:value="0" md:varname="in1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="in2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="()" md:varname="in3">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="in4">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="vector">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_multiplikation__1_" md:name="Multiplikation (1)" md:type="REC GmbH Basic Multiplication" md:utspec="rec_gmbh_basic_multiplication" md:variantName="REC GmbH Basic Multiplication">
+          <md:inVarExprs>
+            <md:varExpr md:value="1.000000" md:varname="f1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="product">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_xdotk" md:name="xdotk" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="xdotk reader">
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_multiplikation__2_" md:name="Multiplikation (2)" md:type="REC GmbH Basic Multiplication" md:utspec="rec_gmbh_basic_multiplication" md:variantName="REC GmbH Basic Multiplication">
+          <md:inVarExprs>
+            <md:varExpr md:value="1.000000" md:varname="f1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="product">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_phidotk" md:name="phidotk" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="phidotk reader">
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_subtraktion__1_" md:name="Subtraktion (1)" md:type="REC GmbH Basic Subtraction" md:utspec="rec_gmbh_basic_subtraction" md:variantName="REC GmbH Basic Subtraction">
+          <md:inVarExprs>
+            <md:varExpr md:value="0.000000" md:varname="minuend">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="2">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0.000000" md:varname="10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="difference">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_multiplikation__3_" md:name="Multiplikation (3)" md:type="REC GmbH Basic Multiplication" md:utspec="rec_gmbh_basic_multiplication" md:variantName="REC GmbH Basic Multiplication">
+          <md:inVarExprs>
+            <md:varExpr md:value="1.000000" md:varname="f1">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f2">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f3">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f4">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f5">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f6">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f7">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f8">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f9">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1.000000" md:varname="f10">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="product">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_asoll" md:name="asoll" md:type="REC GmbH Global Variable Reader Float" md:utspec="rec_gmbh_global_variable_reader_float" md:variantName="asoll reader">
+          <md:outVarExprs>
+            <md:varExpr md:varname="value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Variables" md:id="actor_iffound" md:name="ifFound" md:type="REC GmbH Global Variable Writer Float" md:utspec="rec_gmbh_global_variable_writer_float" md:variantName="ifFound writer">
+          <md:inVarExprs>
+            <md:varExpr md:value="0.000000" md:varname="new_value">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="true" md:varname="write_enable">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_1" md:prod="1">
+          <md:from md:con="image" md:unit="actor_kamera"/>
+          <md:to md:con="image" md:unit="actor_opencv_red_object__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_2" md:prod="1">
+          <md:from md:con="imageWithoutObject" md:unit="actor_opencv_red_object__1_"/>
+          <md:to md:con="image" md:unit="actor_obstacles_profile__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_3" md:prod="1">
+          <md:from md:con="value" md:unit="actor_nsamples"/>
+          <md:to md:con="descretisationLevel" md:unit="actor_obstacles_profile__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_4" md:prod="1">
+          <md:from md:con="value" md:unit="actor_noutputs"/>
+          <md:to md:con="nOutputs" md:unit="actor_write_training_set__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_5" md:prod="1">
+          <md:from md:con="value" md:unit="actor_ninputs"/>
+          <md:to md:con="nInputs" md:unit="actor_write_training_set__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_6" md:prod="1">
+          <md:from md:con="value" md:unit="actor_nsets"/>
+          <md:to md:con="nSets" md:unit="actor_write_training_set__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_7" md:prod="1">
+          <md:from md:con="m1" md:unit="actor_omniantrieb__1_"/>
+          <md:to md:con="setvel" md:unit="actor_motor__1"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_8" md:prod="1">
+          <md:from md:con="m2" md:unit="actor_omniantrieb__1_"/>
+          <md:to md:con="setvel" md:unit="actor_motor__2"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_9" md:prod="1">
+          <md:from md:con="m3" md:unit="actor_omniantrieb__1_"/>
+          <md:to md:con="setvel" md:unit="actor_motor__3"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_10" md:prod="1">
+          <md:from md:con="area" md:unit="actor_opencv_red_object__1_"/>
+          <md:to md:con="in2" md:unit="actor_combine_into_vector__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_11" md:prod="1">
+          <md:from md:con="deflection" md:unit="actor_opencv_red_object__1_"/>
+          <md:to md:con="in1" md:unit="actor_combine_into_vector__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_12" md:prod="1">
+          <md:from md:con="vector" md:unit="actor_combine_into_vector__1_"/>
+          <md:to md:con="input" md:unit="actor_write_training_set__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_13" md:prod="1">
+          <md:from md:con="profile" md:unit="actor_obstacles_profile__1_"/>
+          <md:to md:con="in3" md:unit="actor_combine_into_vector__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_14" md:prod="1">
+          <md:from md:con="vector" md:unit="actor_combine_into_vector__2_"/>
+          <md:to md:con="output" md:unit="actor_write_training_set__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_15" md:prod="1">
+          <md:from md:con="value" md:unit="actor_xdotk"/>
+          <md:to md:con="f2" md:unit="actor_multiplikation__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_16" md:prod="1">
+          <md:from md:con="product" md:unit="actor_multiplikation__1_"/>
+          <md:to md:con="in1" md:unit="actor_combine_into_vector__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_17" md:prod="1">
+          <md:from md:con="value" md:unit="actor_phidotk"/>
+          <md:to md:con="f2" md:unit="actor_multiplikation__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_18" md:prod="1">
+          <md:from md:con="product" md:unit="actor_multiplikation__2_"/>
+          <md:to md:con="in4" md:unit="actor_combine_into_vector__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_19" md:prod="1">
+          <md:from md:con="difference" md:unit="actor_subtraktion__1_"/>
+          <md:to md:con="f1" md:unit="actor_multiplikation__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_20" md:prod="1">
+          <md:from md:con="product" md:unit="actor_multiplikation__1_"/>
+          <md:to md:con="vx" md:unit="actor_omniantrieb__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_21" md:prod="1">
+          <md:from md:con="product" md:unit="actor_multiplikation__2_"/>
+          <md:to md:con="omega" md:unit="actor_omniantrieb__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_22" md:prod="1">
+          <md:from md:con="area" md:unit="actor_opencv_red_object__1_"/>
+          <md:to md:con="1" md:unit="actor_subtraktion__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_23" md:prod="1">
+          <md:from md:con="deflection" md:unit="actor_opencv_red_object__1_"/>
+          <md:to md:con="f1" md:unit="actor_multiplikation__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_24" md:prod="1">
+          <md:from md:con="ifFound" md:unit="actor_opencv_red_object__1_"/>
+          <md:to md:con="f2" md:unit="actor_multiplikation__3_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_25" md:prod="1">
+          <md:from md:con="value" md:unit="actor_asoll"/>
+          <md:to md:con="f1" md:unit="actor_multiplikation__3_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_26" md:prod="1">
+          <md:from md:con="product" md:unit="actor_multiplikation__3_"/>
+          <md:to md:con="minuend" md:unit="actor_subtraktion__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_27" md:prod="1">
+          <md:from md:con="vy" md:unit="actor_steuerungsfeld__1_"/>
+          <md:to md:con="vy" md:unit="actor_omniantrieb__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_28" md:prod="1">
+          <md:from md:con="vy" md:unit="actor_steuerungsfeld__1_"/>
+          <md:to md:con="in2" md:unit="actor_combine_into_vector__2_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_29" md:prod="1">
+          <md:from md:con="ifFound" md:unit="actor_opencv_red_object__1_"/>
+          <md:to md:con="new_value" md:unit="actor_iffound"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_30" md:prod="1">
+          <md:from md:con="ifFound" md:unit="actor_opencv_red_object__1_"/>
+          <md:to md:con="canWrite" md:unit="actor_write_training_set__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_31" md:prod="1">
+          <md:from md:con="y" md:unit="actor_opencv_red_object__1_"/>
+          <md:to md:con="puckY" md:unit="actor_obstacles_profile__1_"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+  </md:sdfs>
+
+  <md:sfcs>
+    <md:sfc md:id="sfcmodel_1">
+      <md:sfcSequence>
+        <md:sfcSimple md:id="sfcitem_simple_init" md:name="Init">
+          <md:timeslice md:nsec="10000000" md:sec="0"/>
+        </md:sfcSimple>
+        <md:sfcTransition md:guard="true" md:id="sfcitem_transition"/>
+        <md:sfcSimple md:id="sfcitem_simple_step1" md:name="Step1" md:sdfModel="sdfmodel_step1">
+          <md:timeslice md:nsec="10000000" md:sec="0"/>
+        </md:sfcSimple>
+        <md:sfcTransition md:guard="false" md:id="sfcitem_transition2"/>
+        <md:sfcJump md:dest="sfcitem_simple_init" md:id="sfcitem_jump"/>
+      </md:sfcSequence>
+    </md:sfc>
+  </md:sfcs>
+
+  <md:layout>
+    <md:sdfs>
+      <md:sdf md:active="true" md:sdfmodel="sdfmodel_step1" md:showData="false" md:showToolTips="false" md:tab="1">
+        <md:sdfViewLayout md:data="000000ff00000000fd00000001000000030000000000000000fc010000002cfb0000004000350063003500350032003600390031003600630039006600340036003600340032003600620063003200380036006500330038003100380031003400300039020000043e00000227000001500000016afb0000003a00340033006400620037006300320036003300660032003200620039006200350032003400630036006200370062003600340034006500640062020000056500000123000001500000016afb000000400036006500320034003600380034006300330032006300650033006600340063003500300066003200340035003000640034003200340034003700660066003802000003490000022d000001d800000087fb000000340032003100300032006500320036003300660035006600390034003300370035006600340037006100340032003600320065006602000003490000019f000001d800000087fb0000003a0036006600340039003600390065003300350037003000640061003900320064003800640038006100360035003900620065003400370034003102000003280000013b0000016c00000087fb0000003e00330062006600370034003300380032003800380066003200370038006300330063003900380033003200310062003500330038006400340039003700380200000333000001cd0000016c00000091fb0000003e003500630037003100350033006300350039003500340037006300620039003700320034003300330065006100390033006400640039003100300063006502000000820000019d000001520000014efb000000400036006400350030003400320064003600370066003800650035003600330063003100640061003700340066003300370032003400380032003200320035006602000002470000027a000001340000011cfb0000004000330063003700630034006300330039003700370033003900340061003300640036006400310032003200390032003400350065006200300033006100370035020000012e00000236000001340000011cfb00000040003400340064006500350033006100620034003700390062003400620037003200310065006500390034006400630032003300320066003100320035006500340200000113000000a6000001520000014efb0000003c003500350061006600640061006100340062003700310034006500350035003400360034003300350063003800310037006100370033006500640037020000003b00000186000001520000014efb0000003c00370065003400630037003600330037003700610030003100370064003400340061003100650033006100300032003700630033003700310032003502000001d20000028d000001340000011cfb0000003a00370063003300650037006100390031003700660034003600350035006500370032003600610061006400360039003400330032003600390063020000005300000191000001520000014efb00000040003300300037003400340035006200310034003400350038003400390033003900340034003400360035003100370066003100630036003500350061006600310200000231000002cd000001340000011cfb0000003c00310063006300360064003400630034006500350039003700350034003300310063003800320034003300640036003000350037003400660031006102000004e500000147000001b90000016afb0000003c00320063006400630032006100350035003600360031003100610064003700640031003300360031006100310036003900360061003700340061003402000001960000011b000001520000014efb000000400036003200360039003400350032006500340039003500330036003500370063003400640036003800370064006400390031006200390034003300650032006302000000ea000000cd0000010e00000084fb000000400032003900390065003100320064003700320064006600310036003800380031003200340061006100330065003500350031003100640032003500350031003102000000bd00000239000001520000014efb000000400033003400610032003300320062003500350038003100640036003700320065003600310038006400340062003600660035003300620039003300360033003902000002bc000002dc000001520000014efb000000400037003500310036003300630031003500370038003400350037006300350063003400310038006600340062003300650037003900340037003400390031006502000005e9000002430000010d000000defb0000003e003400620066003400310063003700300035003100350030003700650033003400630030003100350031006400330036006300630062003600640063006502000005c800000125000001210000009dfb000000400032006600370032003200640032006600370039006500610035003800310039003600640064003900360033003500660034003700360062003500320039006102000002c9000002e7000001340000011cfb0000003a0033006200380061006600660036003100380065006200660038006200340061006100310032003200660031003000300037003300630032003602000000f2000002cb000001520000014efb0000003c0031006400340036003500360032003300330030006300320033003700320034006400320066003200650033006600350032003600330033003500630200000346000002ce000001520000014efb000000400036006300360037003200300066003400320034003200660033003800300039003600330034006500320065006200300031006600650034003600310036006202000001d2000002ef000001340000011cfb0000004000340032003500360036006200610033003700330034006400370066003400660032003900330037003500630065003700310063003000630034003400610065020000009a0000025d000001520000014efb0000003e0037006100380038003600330065003900370038003600620033003400610030006600630032003100380034006200310035003500330036006300660064020000040600000133000001340000011cfb0000003c003400380035006500320035006600610037006600380062003700310063003300310034006600330036006600360034003600630037006600330034020000041c00000237000001520000014efb0000003e00320061003100310034003900630064003700330063006200350062006100650032006500320034003200350035003500640033003500360031006100640200000155000002c3000001340000011cfb0000003e003200320061006200330063003700300035003100310032003400340063006400650036003600350036003300320031003800330036003300300036003402000002b30000012a0000016c00000091fb0000003a0064006500300031003400360034003900620032003700360030003700350037006500610035003600380064003200320066003000350035003002000002c3000001980000016c00000091fb0000003c00350035006400640032006200320030003600340064003000340036003300350038003200310062003600370034003300390061003300640035003302000001a2000001450000016c00000091fb000000400034003200350038003600330063003000370036003400330037003900370061003200320063003700320034003700350032003300350035003600340065003902000000a700000247000001520000014efb00000040003400370063003400340031006400650035006600340034003400380065003400350037006200640035003400370037003700640032003600310036003700350200000524000000b7000001520000014efb0000003e003600640034006300310066006600640032003100350061003100330036006100350033003700350032003600380065003300310063003600380030003502000003800000009a0000013400000161fb0000003e00350038006300360032003600360037003700650061003300380063003000360066003600380033003400320037003200340062003800350062006300360200000239000002a8000001340000011cfb0000003c006300630038003600350065006500390065003900370033006500360034003700390035003100640034003700350038006500320032003300320038020000046d000000f0000001520000014efb0000003e003600300065003000330033003900650036003900340061003400390038003300340034003400640036003300660065003600640037003100640037003902000009fc0000010a0000016400000275fb0000003e003500360036006200320035006500350038003300370033006600660032003400390064006200370031003300650036003200360062003700340064003102000009be000000fb00000164000001e9fb0000003c00370036003400650033006300300038003500610065006100320035003000320032006400620032006400320038003300360065003600330033006202000009940000027d000001520000014efb000000400032003600370035003500640030006100350064006100390033006300650033003500310036003000330064003100350037006600360035003600350035006302000009460000017e0000016c00000091fb0000003e003300350033003000360037003300370033003800380062003600610038003500650032006100330034003200660031003600330032003100660032003702000003960000009e000001340000011cfb0000003a0033003500630030003600320033003800330064006600360033003100370064003400310033003800300037006200390065003100320034003602000004e6000000a10000015200000119fb000000400034006400350030003200640032003300370033006100360036006200350034003600620031003600310065003200330037003900660034003200330063003502000001b2000001100000016c00000087000004fa0000038200000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_kamera" md:width="-1" md:x="90" md:y="18"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_opencv_red_object__1_" md:width="-1" md:x="204" md:y="18"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_obstacles_profile__1_" md:width="-1" md:x="402" md:y="78"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_steuerungsfeld__1_" md:width="-1" md:x="204" md:y="318"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_nsamples" md:width="-1" md:x="204" md:y="108">
+            <md:unitDialogLayout md:objectName="60c50944d364c9310e4562a35c29a8"/>
+          </md:unit>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_write_training_set__1_" md:width="-1" md:x="984" md:y="84">
+            <md:unitDialogLayout md:objectName="3fcf3b482adf29092eec2692445e3aae"/>
+          </md:unit>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_noutputs" md:width="-1" md:x="708" md:y="144"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_ninputs" md:width="-1" md:x="708" md:y="54"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_nsets" md:width="-1" md:x="708" md:y="-12"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_omniantrieb__1_" md:width="-1" md:x="708" md:y="240"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_motor__1" md:width="-1" md:x="954" md:y="180"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_motor__2" md:width="-1" md:x="954" md:y="258"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_motor__3" md:width="-1" md:x="954" md:y="318"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_combine_into_vector__1_" md:width="-1" md:x="534" md:y="24"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_combine_into_vector__2_" md:width="-1" md:x="552" md:y="156"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_multiplikation__1_" md:width="-1" md:x="324" md:y="138"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_xdotk" md:width="-1" md:x="204" md:y="174"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_multiplikation__2_" md:width="-1" md:x="324" md:y="186"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_phidotk" md:width="-1" md:x="204" md:y="240"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_subtraktion__1_" md:width="-1" md:x="114" md:y="144"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_multiplikation__3_" md:width="-1" md:x="306" md:y="-162"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_asoll" md:width="-1" md:x="192" md:y="-168"/>
+          <md:unit md:height="-1" md:nameDisplay="visible" md:unit="actor_iffound" md:width="-1" md:x="474" md:y="-126"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:edge md:edge="edge_1"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="240" md:y="42">
+              <md:point md:x="240" md:y="66">
+                <md:edge md:edge="edge_2"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="252" md:y="108">
+              <md:point md:x="252" md:y="78">
+                <md:edge md:edge="edge_3"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="768" md:y="144">
+              <md:point md:x="768" md:y="102">
+                <md:edge md:edge="edge_4"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="768" md:y="54">
+              <md:point md:x="768" md:y="78">
+                <md:edge md:edge="edge_5"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="774" md:y="-12">
+              <md:point md:x="774" md:y="66">
+                <md:edge md:edge="edge_6"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="834" md:y="228">
+              <md:point md:x="834" md:y="162">
+                <md:edge md:edge="edge_7"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_8"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="834" md:y="252">
+              <md:point md:x="834" md:y="300">
+                <md:edge md:edge="edge_9"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_10"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_11"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="666" md:y="24">
+              <md:point md:x="666" md:y="90">
+                <md:edge md:edge="edge_12"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="480" md:y="78">
+              <md:point md:x="480" md:y="36">
+                <md:edge md:edge="edge_13"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="678" md:y="156">
+              <md:point md:x="678" md:y="192">
+                <md:point md:x="810" md:y="192">
+                  <md:point md:x="810" md:y="114">
+                    <md:edge md:edge="edge_14"/>
+                  </md:point>
+                </md:point>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="270" md:y="174">
+              <md:point md:x="270" md:y="144">
+                <md:edge md:edge="edge_15"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_16"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="270" md:y="240">
+              <md:point md:x="270" md:y="192">
+                <md:edge md:edge="edge_17"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="510" md:y="186">
+              <md:point md:x="510" md:y="174">
+                <md:edge md:edge="edge_18"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="234" md:y="144">
+              <md:point md:x="252" md:y="144">
+                <md:point md:x="252" md:y="132">
+                  <md:edge md:edge="edge_19"/>
+                </md:point>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="474" md:y="138">
+              <md:point md:x="474" md:y="228">
+                <md:edge md:edge="edge_20"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="408" md:y="186">
+              <md:point md:x="408" md:y="252">
+                <md:edge md:edge="edge_21"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="258" md:y="24">
+              <md:point md:x="258" md:y="-84">
+                <md:point md:x="-12" md:y="-84">
+                  <md:point md:x="-12" md:y="150">
+                    <md:edge md:edge="edge_22"/>
+                  </md:point>
+                </md:point>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="276" md:y="12">
+              <md:point md:x="276" md:y="180">
+                <md:edge md:edge="edge_23"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="222" md:y="-156">
+              <md:edge md:edge="edge_24"/>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_25"/>
+          </md:net>
+          <md:net>
+            <md:point md:x="354" md:y="-162">
+              <md:point md:x="354" md:y="-216">
+                <md:point md:x="36" md:y="-216">
+                  <md:point md:x="36" md:y="138">
+                    <md:edge md:edge="edge_26"/>
+                  </md:point>
+                </md:point>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="528" md:y="318">
+              <md:point md:x="528" md:y="240">
+                <md:edge md:edge="edge_27"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="438" md:y="318">
+              <md:point md:x="438" md:y="150">
+                <md:edge md:edge="edge_28"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="246" md:y="-126">
+              <md:point md:x="408" md:y="-126">
+                <md:edge md:edge="edge_29"/>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:point md:x="468" md:y="-6">
+              <md:point md:x="468" md:y="-66">
+                <md:point md:x="822" md:y="-66">
+                  <md:point md:x="822" md:y="54">
+                    <md:edge md:edge="edge_30"/>
+                  </md:point>
+                </md:point>
+              </md:point>
+            </md:point>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_31"/>
+          </md:net>
+        </md:nets>
+        <md:texts>
+          <md:text md:text="WriteTrainingSet" md:x="984" md:y="114"/>
+          <md:text md:text="CombineIntoVector" md:x="546" md:y="180"/>
+          <md:text md:text="CombineIntoVector" md:x="528" md:y="48"/>
+          <md:text md:text="ObstaclesProfile" md:x="390" md:y="96"/>
+          <md:text md:text="RedObject" md:x="156" md:y="48"/>
+        </md:texts>
+      </md:sdf>
+    </md:sdfs>
+    <md:sfcs>
+      <md:sfc md:sfcmodel="sfcmodel_1"/>
+    </md:sfcs>
+  </md:layout>
+
+</md:model>
