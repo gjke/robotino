@@ -6,4 +6,8 @@ blocks for the program "Robotino View" have been developed.
 
 Image processing is being done using the OpenCV library. The controlling of the robot is
 accomplished with a simple feed forward neural network using the FANN (Fast Artificial Neural Netowrk) library.
+
 <img src = "http://www.ros.org/news/assets_c/2010/06/Robotino_Imagefoto-thumb-640x501-98.jpg">
+
+Here is a short guide how to get the openCV library work in Windows and make it accessable in Visual Studio 2010
+<a href="https://github.com/gjke/robotino/wiki/New-Function-Block-for-RobotinoView-2-with-openCV">Install and use OpenCV</a>
