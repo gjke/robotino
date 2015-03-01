@@ -13,4 +13,4 @@ Here is a short guide how to get the openCV library work in Windows and make it 
 <a href="https://github.com/gjke/robotino/wiki/New-Function-Block-for-RobotinoView-2-with-openCV">Install and use OpenCV</a>
 
 Here is a short guide how to get the FANN library work in Windows and make it accessable in Visual Studio 2010</br>
-<a href="https://github.com/gjke/robotino/wiki/New-Function-Block-for-RobotinoView-2-with-FANN">Install and use OpenCV</a>
+<a href="https://github.com/gjke/robotino/wiki/New-Function-Block-for-RobotinoView-2-with-FANN">Install and use FANN</a>
